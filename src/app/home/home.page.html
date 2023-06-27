@@ -1,22 +1,90 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" >
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="12" size-lg="6" class="ion-text-end">
+    <ion-card class="tela_resultado">
+      <ion-label id="resultado">{{ this.resultado }}</ion-label>
+    </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="12" size-lg="6">
+      <ion-row>
+      <ion-col size="3">
+        <ion-button (click)="clear()" class="btn_num">AC</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="exibirOP('/100')" class="btn_num">%</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="exibirOP('')" class="btn_num">+/-</ion-button> 
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="exibirOP('/')" class="btn_icone">÷</ion-button>
+      </ion-col>
+    </ion-row>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-row>
+      <ion-col size="3">
+        <ion-button (click)="exibir(7)" class="btn_num">7</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="exibir(8)" class="btn_num">8</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="exibir(9)" class="btn_num">9</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="exibirOP('*')" class="btn_icone">x</ion-button>
+      </ion-col>
+    </ion-row>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
+    <ion-row>
+      <ion-col size="3">
+        <ion-button (click)="exibir(4)" class="btn_num">4</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="exibir(5)" class="btn_num">5</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="exibir(6)" class="btn_num">6</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="exibirOP('-')" class="btn_icone">-</ion-button>
+      </ion-col>
+    </ion-row>
+    
+    
+    <ion-row>
+      <ion-col size="3">
+        <ion-button (click)="exibir(1)" class="btn_num">1</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="exibir(2)" class="btn_num">2</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="exibir(3)" class="btn_num">3</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="exibirOP('+')" class="btn_icone">+</ion-button>
+      </ion-col>
+    </ion-row>
+    
+      
+    <ion-row>
+      <ion-col size="3">
+        <ion-button (click)="exibir(0)" class="btn_num">0</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="exibirOP(',')" class="btn_num">,</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="back()" class="btn_num"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="currentColor"><path d="M17.707 8.293a1 1 0 0 1 0 1.414L15.414 12l2.293 2.293a1 1 0 0 1-1.414 1.414L14 13.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L12.586 12l-2.293-2.293a1 1 0 1 1 1.414-1.414L14 10.586l2.293-2.293a1 1 0 0 1 1.414 0z"/><path fill-rule="evenodd" d="M22 5a1 1 0 0 0-1-1H9.46a2 2 0 0 0-1.519.698l-5.142 6a2 2 0 0 0 0 2.604l5.142 6A2 2 0 0 0 9.46 20H21a1 1 0 0 0 1-1V5zm-2 13H9.46l-5.143-6L9.46 6H20v12z" clip-rule="evenodd"/></g></svg></ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button (click)="calcular()" class="btn_icone">=</ion-button>
+      </ion-col>
+    </ion-row>
+
+    </ion-col>
+  </ion-row>
 </ion-content>
